@@ -11,7 +11,7 @@ export default [
       reviewCount: 6,
     },
     location: "Online",
-    openSports: 0,
+    openSpots: 0,
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export default [
       reviewCount: 6,
     },
     location: "Online",
-    openSports: 0,
+    openSpots: 27,
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ export default [
       rating: 4.8,
       reviewCount: 6,
     },
-    location: "Online",
-    openSports: 0,
+    location: "Alaska",
+    openSpots: 3,
   },
 ];

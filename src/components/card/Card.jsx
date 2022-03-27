@@ -5,21 +5,32 @@ import "./card.scss";
 import star from "../../image/Star.png";
 
 const Card = (props) => {
+  // console.log(props.card);
+  let badgeText;
+  if (props.card.openSpots == 0) {
+    badgeText = "SOLD OUT";
+  } else if (props.card.location === "Online") {
+    badgeText = "ONLINE";
+  }
+
   return (
     <div className="card">
-      <img src={props.img} alt="Katie Zaferes" />
+      {badgeText && <div className="card--spot">{badgeText}</div>}
+      <img src={props.card.coverImg} alt="Katie Zaferes" />
 
       <div className="card--stats">
         <img src={star} alt="Star Icon" />
-        <span className="card--rating">{props.rating}</span>
-        <span className="card--reviewCount">({props.reviewCount})</span>
-        <span>{props.location}</span>
+        <span className="card--rating">{props.card.stats.rating}</span>
+        <span className="card--reviewCount">
+          ({props.card.stats.reviewCount})
+        </span>
+        <span>{props.card.location}</span>
       </div>
 
       <div className="card--text">
-        <h3>{props.title}</h3>
+        <h3>{props.card.title}</h3>
         <h3>
-          <span>${props.price}</span> / person
+          <span>${props.card.price}</span> / person
         </h3>
       </div>
     </div>

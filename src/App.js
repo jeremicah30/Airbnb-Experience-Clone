@@ -7,17 +7,7 @@ import { Card, Navbar, Hero } from "./components";
 
 const App = () => {
   const cardElements = cardData.map((card) => {
-    return (
-      <Card
-        key={card.id}
-        rating={card.stats.rating}
-        reviewCount={card.stats.reviewCount}
-        title={card.title}
-        img={card.coverImg}
-        price={card.price}
-        location={card.location}
-      />
-    );
+    return <Card key={card.id} card={card} />;
   });
 
   return (

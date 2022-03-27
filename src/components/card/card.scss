@@ -1,6 +1,16 @@
 .card {
   padding: 30px;
   width: fit-content;
+  position: relative;
+
+  &--spot {
+    position: absolute;
+    padding: 5px 7px;
+    margin: 5px 8px;
+    background: #fff;
+    border-radius: 2px;
+    font-weight: bold;
+  }
 
   &--rating,
   &--reviewCount {
